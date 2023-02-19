@@ -152,22 +152,22 @@ h1 {
 }
 
 .reaction {
-    background-color: hsla(var(--Light-red), .1);
+    background-color: hsla(var(--Light-red), .05);
     color: hsla(var(--Light-red));
 }
 
 .memory {
-    background-color: hsla(var(--Orangey-yellow), .1);
+    background-color: hsla(var(--Orangey-yellow), .05);
     color: hsla(var(--Orangey-yellow));
 }
 
 .verbal {
-    background-color: hsla(var(--Green-teal), .1);
+    background-color: hsla(var(--Green-teal), .05);
     color: hsla(var(--Green-teal));
 }
 
 .visual {
-    background-color: hsla(var(--Cobalt-blue), .1);
+    background-color: hsla(var(--Cobalt-blue), .05);
     color: hsla(var(--Cobalt-blue));
 }
 
