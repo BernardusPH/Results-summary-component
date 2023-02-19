@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+
+:root {
+    /* ### Primary */
+    --Light-red: 0, 100%, 67%;
+    --Orangey-yellow: 39, 100%, 56%;
+    --Green-teal: 166, 100%, 37%;
+    --Cobalt-blue: 234, 85%, 45%;
+
+    /* ## Gradients */
+    /* background */
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    /* circle */
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+
+
+    /* ### Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: clamp(350px, 100%, 500px);
+}
+
+.result-container {
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 0 0 30px 30px;
+    position: relative;
+    transform: translateY(-20px);
+}
+
+h1 {
+    color: var(--Light-lavender);
+    font-size: 1rem;
+}
+
+.result-nr {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--White);
+
+}
+
+.result-nr>.outof-nr {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--Light-lavender);
+    opacity: .6;
+
+}
+
+.result-info {
+
+    margin-top: 2rem;
+}
+
+.result-info>h2 {
+    font-size: 1.4rem;
+    color: var(--Pale-blue);
+
+}
+
+.result-info>p {
+    width: 90%;
+    margin: .5rem auto;
+    color: var(--Light-lavender);
+}
+
+
+
+
+
+
+
+.summary {
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+.summary h2 {
+    font-size: 1.3rem;
+
+}
+
+.score-container {
+    width: 100%;
+
+}
+
+.score-container>* {
+    margin: 1rem auto;
+}
+
+.score {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+.score-number {
+    margin-left: auto;
+    color: var(--Dark-gray-blue);
+    font-weight: 800;
+}
+
+.score-number>span {
+
+    opacity: .5;
+}
+
+.reaction {
+    background-color: hsla(var(--Light-red), .1);
+    color: hsla(var(--Light-red));
+}
+
+.memory {
+    background-color: hsla(var(--Orangey-yellow), .1);
+    color: hsla(var(--Orangey-yellow));
+}
+
+.verbal {
+    background-color: hsla(var(--Green-teal), .1);
+    color: hsla(var(--Green-teal));
+}
+
+.visual {
+    background-color: hsla(var(--Cobalt-blue), .1);
+    color: hsla(var(--Cobalt-blue));
+}
+
+
+.summary button {
+    font-family: inherit;
+    width: 100%;
+    height:56px;
+    font-size: 1rem;
+    padding: .8rem;
+    background: var(--Dark-gray-blue);
+    color: var(--White);
+    border-radius: 30px;
+    font-weight: 800;
+    transition: all .1s ease-out;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.summary button:hover {
+    
+    outline: none;
+    border: none;
+    background: linear-gradient(to bottom, var(--Light-slate-blue), var(--Light-royal-blue));
+}
+
+.attribution {
+    font-size: 20px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media(min-width:750px) {
+    body {
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        flex-direction: row;
+        width: 740px;
+
+
+    }
+
+    main>* {
+        width: 50%;
+        position: relative;
+    }
+
+    .result-container {
+        transform: none;
+        z-index: 100;
+        border-radius: 30px;
+
+    }
+    .result-nr {
+        width: 200px;
+        height: 200px;
+    }
+    .result-info>p{
+        width:75%;
+    }
+
+    .summary {
+        z-index: 3;
+        overflow: hidden;
+        padding: 1rem 1rem 1rem 3rem;
+        transform: translateX(-30px);
+        box-shadow: 5px 7px 24px -12px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 5px 7px 24px -12px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 5px 7px 24px -12px rgba(0, 0, 0, 0.75);
+    }
+}
+
+
+
+
